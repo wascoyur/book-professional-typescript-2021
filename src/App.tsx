@@ -1,19 +1,15 @@
+import React from 'react';
 import './App.css';
+import { Companion, getNextDay } from './functions/Pattern-Companion';
 
-function App(): JSX.Element {
-  const fetchWithAuth = (
-    id: string | number | boolean,
-  ): string | number | boolean => {
-    if (typeof id === 'string') {
-      return id.toLowerCase();
-    }
-    return id;
-  };
-  const out = fetchWithAuth(5);
+function App() {
+  Companion();
   return (
     <div className='App'>
-      <h1>Ready to develop</h1>
-      <div>{out}</div>
+      <h1>Companion</h1>
+      Companion{Companion()}
+      <br />
+      {getNextDay('Mon')}
     </div>
   );
 }
