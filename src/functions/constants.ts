@@ -9,3 +9,4 @@ export type APIResponse = {
     };
   };
 };
+// const nextDay: Record<Weekday, Day> = { Mon: 'Tue' };
