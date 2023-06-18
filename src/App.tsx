@@ -1,6 +1,7 @@
 import "./App.scss";
 import { Aside } from "./components/Aside";
 import { UnitAhead } from "./components/UnitAhead";
+import { Rule17 } from "./unit-2/Rule17";
 
 function App() {
   const result = map([1, 2, 3, 4], (x) => x)
@@ -14,7 +15,9 @@ function App() {
 
         <UnitAhead {...headers}/>
       </aside>
-      <main>main</main>
+      <main>
+        <Rule17/>
+      </main>
       <footer>footer</footer>
     </div>
   </div>)
