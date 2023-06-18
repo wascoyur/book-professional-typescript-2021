@@ -1,0 +1,41 @@
+.App {
+  text-align: center;
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 10px;
+    grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer";
+
+    header {
+      grid-area: header;
+      background-color: #cdc7d5;
+    }
+
+    aside {
+      grid-area: aside;
+      background-color: rgba(58, 53, 55, 0.53);
+    }
+
+    main {
+      grid-area: main;
+      background-color: #bbadb2;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: rgba(126, 87, 194, 0.6);
+    }
+  }
+}
+
+
+
+
+
+
+
+

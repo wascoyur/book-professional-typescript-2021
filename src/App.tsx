@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import { Aside } from "./components/Aside";
+import { UnitAhead } from "./components/UnitAhead";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const result = map([1, 2, 3, 4], (x) => x)
+  const headers:{head:string}= {head: "Unit 2. Type System"}
+
+  return (<div className="App">
+    <div className="grid-container">
+      <header>First header</header>
+      <aside className="aside">
+        {/*<Aside {...headers}/>*/}
+
+        <UnitAhead {...headers}/>
+      </aside>
+      <main>main</main>
+      <footer>footer</footer>
     </div>
-  );
+  </div>)
 }
 
 export default App;
+
+function map(array: unknown[], f: (item: unknown) => unknown): unknown[] {
+  const result = []
+  for (let i = 0; i < array.length; i++) {
+    result[i] = f(array[i])
+  }
+  return result
+}
+//TODO:
