@@ -3,7 +3,7 @@ export const Rule17=()=>{
     const nums=[]
     for (let i = 0; i < n; i++) {
       nums.push(i)
-      console.log(arraySums(nums))
+      console.log(arraySums([...nums]))
     }
     return nums
   }
@@ -13,7 +13,7 @@ export const Rule17=()=>{
 }
 function arraySums(arr: readonly number[]) {
   let sum=0,num
-  while ((num = arr.pop()) !== undefined){
+  for (const num of arr){
     sum+=num
   }
    return sum
